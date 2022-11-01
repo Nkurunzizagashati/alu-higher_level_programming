@@ -5,18 +5,19 @@ if __name__ == "__main__":
     number_of_arg = len(argv)
     if number_of_arg != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-    a = argv[1]
-    b = argv[3]
+        exit (1)
+    a = int(argv[1])
+    b = int(argv[3])
     op = argv[2]
     if op == '+':
-        print("{:d} {} {:d} = {:d}".format(a, op, b, add(a, b)))
+        answer = add(a, b)
     elif op == '-':
-        print("{:d} {} {:d} = {:d}".format(a, op, b, sub(a, b)))
+        answer = sub(a, b)
     elif op == '*':
-        print("{:d} {} {:d} = {:d}".format(a, op, b, mul(a, b)))
+        answer = mul(a, b)
     elif op == '/':
-        print("{:d} {} {:d} = {:d}".format(a, op, b, div(a, b)))
+        answer = div(a, b)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit (1)
-
+    print("{:d} {} {:d} = {:d}".format(a, op, b, answer))
