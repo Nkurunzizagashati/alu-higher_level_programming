@@ -31,7 +31,7 @@ class Square:
     def area(self):
         ''' a function that will print the area of the current square '''
         return (self.__size * self.__size)
-    
+
     def my_print(self):
         ''' a method that the stdout the square with the # '''
         for i in range(0, self.__size):
