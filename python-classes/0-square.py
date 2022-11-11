@@ -4,10 +4,8 @@
    defining a class 'square'
 """
 
-
 class square:
-    """
-       square
-    """
-
+    '''
+    a square
+    '''
     pass
