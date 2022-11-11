@@ -6,7 +6,7 @@
 # if size is less than 0,
 # raise a ValueError exception with the message size must be >= 0
 '''
-   a class that defines a square
+    define a class 'Square'
 '''
 
 
@@ -27,4 +27,4 @@ class Square:
         '''
            a function that prints the area of the given square (current square)
         '''
-        return self.(size * size)
+        return (self.__size * self.__size)
