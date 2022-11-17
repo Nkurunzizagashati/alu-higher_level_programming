@@ -7,12 +7,11 @@
 
 class BaseGeometry:
     """
-       this is an empty class
+       Representation of 'BaseGeometry'
     """
 
     def area(self):
     """
-       this module raises an Exception with
-       the message area() is not implemented
+       raises Exception with message
     """
     raise Exception('area() is not implemented')
