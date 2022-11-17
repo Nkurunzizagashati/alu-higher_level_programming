@@ -7,8 +7,12 @@
 
 
 class Mylist(list):
-    ''' this class inherits from list class '''
+    """
+       implement sorted list
+    """
 
     def print_sorted(self):
-        ''' return: sorted list '''
+        """
+           prints sorted list
+        """
         return sorted(self)
