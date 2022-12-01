@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
     if my_list == []:
-        return "{:.2f}".format(0)
+        return 0
     else:
         n_tuples = len(my_list)
         x = 0
