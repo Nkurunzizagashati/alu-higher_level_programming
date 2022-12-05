@@ -14,8 +14,8 @@ class Rectangle:
         """
             this is the init function it is called as a class is called
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
