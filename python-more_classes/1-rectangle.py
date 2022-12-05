@@ -12,7 +12,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """
-            this is the init function, it contains attributes and it is called as a class is called
+            this is the init function it is called as a class is called
         """
         self.__width = width
         self.__height = height
@@ -31,9 +31,9 @@ class Rectangle:
             if the value if not an integer, it will raise an error
             else if the value is less than zero it will raise ValueError
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError('width must be an integer')
-        elif value < 0:
+        if value < 0:
             raise ValueError('width must be >= 0')
         self.__width = value
 
@@ -53,6 +53,6 @@ class Rectangle:
         """
         if type(value) is not int:
             raise TypeError('height must be an integer')
-        elif value < 0:
+        if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
