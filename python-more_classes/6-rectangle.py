@@ -11,6 +11,7 @@ class Rectangle:
     """
         a class Rectangle with private attributes width and height
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -18,6 +19,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -97,3 +99,4 @@ class Rectangle:
             let say bye to the instance of Rectangle which will be passed in this function
         """
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
