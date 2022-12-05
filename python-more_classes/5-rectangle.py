@@ -94,6 +94,7 @@ class Rectangle:
 
     def __del__(self):
         """
-            let say bye to the instance of Rectangle which will be passed in this function
+            let say bye to the instance
+            of Rectangle which will be passed in this function
         """
         print("Bye rectangle...")
