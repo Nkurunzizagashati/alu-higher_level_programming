@@ -81,14 +81,14 @@ class Rectangle:
         """
             this method will draw the rectangle using h_tag
         """
+        string = ''
         if self.__height == 0 or self.__width == 0:
-            return ("")
-        rectangle = []
+            return string
         for i in range(0, self.__height):
-            [rectangle.append(self.print_symbol) for j in range(self.__width)]
+            string += str(self.print_symbol) * self.width
             if i != self.__height - 1:
-                rectangle.append("\n")
-        return ("".join(rectangle))
+                string += "\n"
+        return string
 
     def __repr__(self):
         """
