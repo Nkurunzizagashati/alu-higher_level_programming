@@ -1,0 +1,19 @@
+The ``0-add_integer`` module
+__ __ __ __ __ __ __ __ __ __
+__ __ __ __ __ __ __ __ __ __
+
+using ``add_integer``
+
+this function will return the sum of two integers a and b
+
+	>>>from 0-add_integer import add_integer
+Now use it:
+
+	>>>add_integer(1, 2)
+	3
+
+	>>>add_integer(100, -2)
+	98
+
+	>>>add_integer(2)
+	100
