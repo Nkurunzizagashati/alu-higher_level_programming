@@ -1,20 +1,51 @@
-The ``0-add_integer`` module
-__ __ __ __ __ __ __ __ __ __
-__ __ __ __ __ __ __ __ __ __
+How this function will work
+===========================
 
-using ``add_integer``
+this function will add two integers ``add_integer(a, b=98)``
 
-this function will return the sum of two integers a and b
+How users will use this function
+================================
 
-	>>>from 0-add_integer import add_integer
+users will pass two integers in a function ``add_integer(a, b=98)``
+it similar to using a + b
 
-Now use it:
+::
 
-	>>>add_integer(1, 2)
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1, 2)
 	3
 
-	>>>add_integer(100, -2)
+::
+
+	>>> add_integer(100, -2)
 	98
 
-	>>>add_integer(2)
+If we have floats, floats will be converted into integers before adding
+
+::
+
+	>>> add_integer(2.2, 3)
+	5
+
+if a is not an integero or a float, we will get a TypeError
+
+::
+
+	>>> add_integer('fab', 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+if b is not an integer or a float, we will get a TypeError
+
+::
+
+	>>> add_integer(4, 'gas')
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+if only one argument is provided, it will also work and the value provided will be a and b by default will be 98
+
+::
+
+	>> add_integer(2)
 	100
