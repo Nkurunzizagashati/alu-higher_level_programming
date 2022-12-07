@@ -7,6 +7,7 @@ using ``add_integer``
 this function will return the sum of two integers a and b
 
 	>>>from 0-add_integer import add_integer
+
 Now use it:
 
 	>>>add_integer(1, 2)
