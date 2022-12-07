@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+# a function that adds 2 integers
+"""
+    define function 'add_integers'
+"""
+
+
 def add_integer(a, b=98):
+    """
+        this function returns the sum of two integers
+    """
     if type(a) is float:
         a = int(a)
     if type(b) is float:
