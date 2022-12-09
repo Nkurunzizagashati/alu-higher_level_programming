@@ -76,7 +76,7 @@ If matrix is not is not a list of lists of integers or floats, a TypeError will 
 	>>> matrix = None
 	>>> print(matrix_divided(matrix, 4))
 	Traceback (most recent call last):
-	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	TypeError: object of type 'NoneType' has no len()
 
 An empty list will give an error
 
