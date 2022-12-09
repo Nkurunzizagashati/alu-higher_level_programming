@@ -17,7 +17,7 @@ then the function will iterate over the elements of this function and divide the
 	...	[8, 4, 6]
 	... ]
 	>>> print(matrix_divided(matrix, 2))
-	[[1, 2, 3], [4, 2, 3]]
+	[[1.0, 2.0, 3.0], [4.0, 2.0, 3.0]]
 
 The original matrix will not be changed
 
@@ -47,7 +47,7 @@ If you have a matrix with elements which are floats, this function also can work
 	...	[8.6, 6.4, 4.6]
 	... ]
 
-	>>> print(matrix_divided(matrix, 2)
+	>>> print(matrix_divided(matrix, 2))
 	[[2.3, 3.2, 4.3], [4.3, 3.2, 2.3]]
 
 integers and floats also you can combine them if you want, the function will work
@@ -59,7 +59,7 @@ integers and floats also you can combine them if you want, the function will wor
 	...	[4, 8.6, -6]
 	... ]
 
-	>>> print(matrix_divided(matrix, 2)
+	>>> print(matrix_divided(matrix, 2))
 	[[2.3, -1, 3.2], [2, 4.3, -3]]
 
 If matrix is not is not a list of lists of integers or floats, a TypeError will be gotten
@@ -127,7 +127,7 @@ If one of the elements of list in matrix is neither an int nor float, an error i
 	...	[1, 2, 3]
 	... ]
 
-	>>> print(matrix_divided(matrix, 3)
+	>>> print(matrix_divided(matrix, 3))
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
@@ -143,7 +143,7 @@ If div is not an int or a float, an error will be gotten
 	...	[4, 12, 8]
 	... ]
 
-	>>> print(matrix_divided(matrix, 'fab')
+	>>> print(matrix_divided(matrix, 'fab'))
 	Traceback (most recent call last):
 	TypeError: div must be a number
 
