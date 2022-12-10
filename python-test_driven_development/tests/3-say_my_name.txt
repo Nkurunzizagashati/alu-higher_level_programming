@@ -36,6 +36,6 @@ If there is no  argument which has been passed to the function, we will get a Ty
 
 ::
 
-	>>> say_my_name(None)
+	>>> say_my_name()
 	Traceback (most recent call last):
-	TypeError: first_name must be a string
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
