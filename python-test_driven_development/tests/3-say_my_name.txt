@@ -16,7 +16,7 @@ If we pass only one argument int our function, it will only say one name
 ::
 
 	>>> say_my_name("Bob")
-	My name is Bob
+	My name is Bob 
 
 If the one of the arguments is not a string, we will get a TypeError
 
