@@ -31,3 +31,11 @@ If the one of the arguments is not a string, we will get a TypeError
 	>>> say_my_name("Fab", 3)
 	Traceback (most recent call last):
 	TypeError: last_name must be a string
+
+If there is no  argument which has been passed to the function, we will get a TypeError
+
+::
+
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
