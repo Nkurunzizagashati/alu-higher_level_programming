@@ -1,0 +1,33 @@
+THIS IS A FUNCTION THAT WILL SAY NAMES
+======================================
+
+this function will call you the names that you will pass into it.
+
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+If we pass only one argument int our function, it will only say one name
+
+::
+
+	>>> say_my_name("Bob")
+	My name is Bob
+
+If the one of the arguments is not a string, we will get a TypeError
+
+::
+
+	>>> say_my_name(1, "Fab")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name("Fab", 3)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
