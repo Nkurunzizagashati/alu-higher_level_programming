@@ -1,0 +1,59 @@
+This file defines how text_indentation function works
+=====================================================
+
+After every '.', ':', or '?', two new lines are printed
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation('what?')
+	what?
+	<BLANKLINE>
+
+Spaces at the beginning of a line are not recognized
+
+::
+
+	>>> text_indentation('  Fab.')
+	Fab.
+	<BLANKLINE>
+
+Also spaces at the end of a line are not recognised
+
+::
+
+	>>> text_indentation('Fab.  ')
+	Fab.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation('  Yes. My name is Fabrice.  ')
+	Yes.
+	<BLANKLINE>
+	My name is Fabrice.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation('My name is Fabrice')
+	My name is Fabrice
+
+New lines '\n' are used as ussual
+
+::
+
+	>>> text_indentation('How are you doing?\n Me I am ok.')
+	How are you doing?
+	<BLANKLINE>
+	<BLANKLINE>
+	Me I am ok.
+	<BLANKLINE>
+
+Text must be a string, otherwise, a TypeError is gotten
+
+::
+
+	>>> text_indentation(2)
+	Traceback (most recent call last):
+	TypeError: text must be a string
