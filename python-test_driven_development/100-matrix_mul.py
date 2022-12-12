@@ -45,7 +45,7 @@ def matrix_mul(m_a, m_b):
         n_row = []
         for row_b in new_matrix_b:
             product = 0
-            for i in range(len(new_matrix_b)):
+            for i in range(len(new_matrix_b[0])):
                 product += row_a[i] * row_b[i]
             n_row.append(product)
         new_matrix.append(n_row)
