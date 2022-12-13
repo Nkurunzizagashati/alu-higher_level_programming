@@ -1,0 +1,85 @@
+This is a test file for a function that multiply matrices
+=========================================================
+
+
+::
+
+	>>> lazy_matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+	[[7, 10], [15, 22]]
+
+	>>> print(lazy_matrix_mul([[1, 'fab'], [2, 3]], [[1, 2], [3, 2]]))
+	Traceback (most recent call last):
+	TypeError: m_a should contain only integers or floats
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 2]], [[1, 'fab'], [2, 3]]))
+	Traceback (most recent call last):
+	TypeError: m_b should contain only integers or floats
+
+
+	>>> print(lazy_matrix_mul("fabrice", [[1, 2], [3, 2]]))
+	Traceback (most recent call last):
+	TypeError: m_a must be a list
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4]], "fab"))
+	Traceback (most recent call last):
+	TypeError: m_b must be a list
+
+
+	>>> print(lazy_matrix_mul(["fab", 2], [[1, 2], [2, 3]]))
+	Traceback (most recent call last):
+	TypeError: m_a must be a list of lists
+
+	>>> print(lazy_matrix_mul([[1, 2], [2, 3]], ["fab", 2]))
+	Traceback (most recent call last):
+	TypeError: m_b must be a list of lists
+
+
+	>>> print(lazy_matrix_mul([], [[1, 2], [3, 2]]))
+	Traceback (most recent call last):
+	ValueError: m_a can't be empty
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 2]], []))
+	Traceback (most recent call last):
+	ValueError: m_b can't be empty
+
+	>>> print(lazy_matrix_mul([[]], [[1, 2], [3, 2]]))
+	Traceback (most recent call last):
+	ValueError: m_a can't be empty
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 2]], [[]]))
+	Traceback (most recent call last):
+	ValueError: m_b can't be empty
+
+
+	>>> print(lazy_matrix_mul([[1, 2, 3], [1, 2]], [[1, 2], [3, 2]]))
+	Traceback (most recent call last):
+	TypeError: each row of m_a must be of the same size
+
+	>>> print(lazy_matrix_mul([[1, 2], [1, 2]], [[1, 2], [3, 2, 4]]))
+	Traceback (most recent call last):
+	TypeError: each row of m_b must be of the same size
+
+
+	>>> print(lazy_matrix_mul([[1, 2], [2, 3], [4, 5]], [[1, 2], [1, 2], [4, 6]]))
+	Traceback (most recent call last):
+	ValueError: shapes (3,2) and (3,2) not aligned: 3 (dim 1) != 2 (dim 0)
+
+
+	>>> print(lazy_matrix_mul())
+	Traceback (most recent call last):
+	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+
+	>>> m_a = [
+    	... [1, 2.2, 3.3, 4],
+    	... [5, 6, 7, 8.8],
+    	... ]
+    	>>> m_b = [
+    	... [1.1, 2, 3.3],
+    	... [4.0, 5.5, 6],
+    	... [7, 8, 9],
+    	... [10.01, 11, 12.3]
+    	... ]
+    	>>> print(lazy_matrix_mul(m_a, m_b))
+	[[33.0, 40.5, 46.2], [78.5, 99.0, 115.5]]
