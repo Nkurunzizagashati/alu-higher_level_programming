@@ -123,5 +123,5 @@ class Rectangle(Base):
         if self.width == 0:
             return ""
         for i in range(self.height):
-            rectangle.append("#" * slf.width)
+            rectangle.append("#" * self.width)
         return rectangle
