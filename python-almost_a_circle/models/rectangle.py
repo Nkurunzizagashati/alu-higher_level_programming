@@ -76,7 +76,7 @@ class Rectangle(Base):
         self.__x = new_x
 
     @property
-    def y(self, new_y):
+    def y(self):
         """
             this function will return the value of y
             which is the position on y_axis
