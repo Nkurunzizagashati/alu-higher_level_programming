@@ -43,6 +43,10 @@ class Rectangle(Base):
             in this function which will replace the
             existing value
         """
+        if not isinstance(new_width, int):
+            raise TypeError("new_width must be an integer")
+        if new_width <= 0:
+            raise ValueError("new_width must be > 0")
         self.__width = new_width
 
     @property
@@ -57,6 +61,10 @@ class Rectangle(Base):
         """
             this function will update the value of height
         """
+        if not isinstance(n_height, int):
+            raise TypeError("n_height must be an integer")
+        if n_height <= 0:
+            raise ValueError("n_height must be > 0")
         self.__height = n_height
 
     @property
@@ -73,6 +81,10 @@ class Rectangle(Base):
             this function will update the position
             on x_axis
         """
+        if not isinstance(new_x, int):
+            raise TypeError("new_x must be an integer")
+        if new_x <= 0:
+            raise ValueError("new_x must be >= 0")
         self.__x = new_x
 
     @property
@@ -88,4 +100,8 @@ class Rectangle(Base):
         """
             this function updates the value of y
         """
+        if not isinstance(new_y, int):
+            raise TypeError("new_y must be an int")
+        if new_y <= 0:
+            raise ValueError("new_y must be >= 0")
         self.__y = new_y
