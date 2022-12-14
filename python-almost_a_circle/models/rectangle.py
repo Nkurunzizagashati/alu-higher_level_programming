@@ -101,7 +101,27 @@ class Rectangle(Base):
             this function updates the value of y
         """
         if type(value) != int:
-            raise TypeError("y must be an int")
+            raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """
+            this method calculates the area of a square
+        """
+        return self.height * self.width
+
+    def display(self):
+        """
+            prints in stdout the Rectangle instance with the
+            character # - you don’t need to handle x and y here
+        """
+        rectangle = ""
+        if self.height == 0:
+            return ""
+        if self.width == 0:
+            return ""
+        for i in range(self.height):
+            rectangle.append("#" * slf.width)
+        return rectangle
