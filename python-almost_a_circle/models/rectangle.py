@@ -117,11 +117,10 @@ class Rectangle(Base):
             prints in stdout the Rectangle instance with the
             character # - you don’t need to handle x and y here
         """
-        rectangle = ""
-        if self.height == 0:
-            return ""
-        if self.width == 0:
-            return ""
+        if self.height == 0 or self.width == 0:
+            print("")
+            return [print("") for y in range(self.y)]
         for i in range(self.height):
-            rectangle.append("#" * self.width)
-        return rectangle
+            [print(" ", end="") for n in range(self.x)]
+            [print("#", end="") for m in range(self.width)]
+            print("")
