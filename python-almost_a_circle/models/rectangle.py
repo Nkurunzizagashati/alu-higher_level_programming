@@ -43,7 +43,7 @@ class Rectangle(Base):
             in this function which will replace the
             existing value
         """
-        if not isinstance(new_width, int):
+        if type(new_width) != int:
             raise TypeError("width must be an integer")
         if new_width <= 0:
             raise ValueError("width must be > 0")
@@ -61,7 +61,7 @@ class Rectangle(Base):
         """
             this function will update the value of height
         """
-        if not isinstance(n_height, int):
+        if type(n_height) != int:
             raise TypeError("height must be an integer")
         if n_height <= 0:
             raise ValueError("height must be > 0")
@@ -81,7 +81,7 @@ class Rectangle(Base):
             this function will update the position
             on x_axis
         """
-        if not isinstance(new_x, int):
+        if type(new_x) != int:
             raise TypeError("x must be an integer")
         if new_x <= 0:
             raise ValueError("x must be >= 0")
@@ -100,7 +100,7 @@ class Rectangle(Base):
         """
             this function updates the value of y
         """
-        if not isinstance(new_y, int):
+        if type(new_y) != int:
             raise TypeError("y must be an int")
         if new_y <= 0:
             raise ValueError("y must be >= 0")
