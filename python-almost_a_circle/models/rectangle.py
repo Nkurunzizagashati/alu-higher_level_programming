@@ -131,4 +131,4 @@ class Rectangle(Base):
             class Rectangle
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                self.x, self.y, self.width, self.height)
+                 self.x, self.y, self.width, self.height)
