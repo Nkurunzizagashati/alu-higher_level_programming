@@ -69,11 +69,5 @@ class Square(Rectangle):
             this metho returns a dictionary
             representation of a rectangle
         """
-        attributes = ['id', 'size', 'x', 'y']
-        dict_repr = {}
-        for key in attributes:
-            if key == 'size':
-                dict_repr[key] = getattr(self, 'width')
-            else:
-                dict_repr[key] = getattr(self, key)
-        return dict_repr
+        return "{'x':{}, 'y': {}, 'id': {}, 'height': {}, 'width': {}".
+                format(self.x, self.y, self.id, delf.height, self.width)
