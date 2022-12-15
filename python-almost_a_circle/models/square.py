@@ -22,7 +22,7 @@ class Square(Rectangle):
         """
             magic method
         """
-        return "[Square] ({}) {}/{} - {}/{}".format(self.id,
+        return "[Square] ({}) {}/{} - {}".format(self.id,
                                                     self.x, self.y,
-                                                    self.size, self.size)
+                                                    self.height)
                                                     
