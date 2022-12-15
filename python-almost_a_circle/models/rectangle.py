@@ -124,3 +124,11 @@ class Rectangle(Base):
             [print(" ", end="") for n in range(self.x)]
             [print("#", end="") for m in range(self.width)]
             print("")
+
+    def __str__(self):
+        """
+            this function will print the string representation
+            class Rectangle
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                self.x, self.y, self.width, self.height)
