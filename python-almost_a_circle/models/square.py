@@ -69,7 +69,4 @@ class Square(Rectangle):
             this metho returns a dictionary
             representation of a rectangle
         """
-        return "{'x':{}, 'y': {}, 'id': {}, 'height': {}, 'width': {}".format(self.x,
-                                                                              self.y,
-                                                                              self.id,
-                                                                              self.height, self.width)
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
