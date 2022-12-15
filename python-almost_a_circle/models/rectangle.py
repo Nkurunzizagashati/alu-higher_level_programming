@@ -131,4 +131,19 @@ class Rectangle(Base):
             class Rectangle
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.x, self.y, self.width, self.height)
+                                                       self.x, self.y,
+                                                       self.width,
+                                                       self.height)
+
+    def update(self, *args, **qwargs):
+        """
+            now we will allow users to input other
+            attributes
+        """
+        if args is not None and len(args) is not 0:
+            list_atr = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, list_atr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
