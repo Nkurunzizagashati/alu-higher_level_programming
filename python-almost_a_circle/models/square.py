@@ -22,7 +22,24 @@ class Square(Rectangle):
         """
             magic method
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id,
+        return "[Square] ({}) {}/{} - {}/{}".format(self.id,
                                                     self.x, self.y,
-                                                    self.height)
-                                                    
+                                                    self.width, self.height)
+
+    @property
+    def size(self):
+        """
+            this function will return the size of square
+        """
+        return self.height
+
+    @size.setter
+    def size(self, value):
+        self.height = value
+        self.width = value
+
+    def __str__(self):
+        """
+            this is a special method
+        """
+        return "[Rectangle] ({}) {}/{} - {}".format(self.id, self.x, self.size)
