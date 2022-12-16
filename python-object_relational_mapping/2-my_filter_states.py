@@ -5,7 +5,7 @@
     import 'MySQLdb' and 'sys'
 """
 
-import MySQL
+import MySQLdb
 import sys
 
 
