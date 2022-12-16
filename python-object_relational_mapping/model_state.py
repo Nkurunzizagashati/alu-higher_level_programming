@@ -12,8 +12,6 @@ from sqlalchemy.ext.declarative import declarative_base
 mymetadata = MetaData()
 Base = declarative_base(metadata=mymetadata)
 
-
-
 class State(Base):
     """
         this class inherits from Base class
