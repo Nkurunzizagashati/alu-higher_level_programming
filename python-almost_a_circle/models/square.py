@@ -1,72 +1,88 @@
 #!/usr/bin/python3
-# the class Square that inherits from Rectangle
-"""
-    define class 'Square'
-"""
+"""Create a Square class for the work"""
+
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """
-        this function defines square
-    """
-
+    """Create a Square class for the work"""
     def __init__(self, size, x=0, y=0, id=None):
         """
-            this is an init function, it will
-            be given some attributes from Rectangle function
+        Create a Square class for the work
+
+        :param size: The size of the square
+        :param x: The x coordinate of the square
+        :param y: The y coordinate of the square
+        :param id: The id of the square
         """
         super().__init__(size, size, x, y, id)
-
-    def __str__(self):
-        """
-            magic method
-        """
-        return "[Square] ({}) {}/{} - {}/{}".format(self.id,
-                                                    self.x, self.y,
-                                                    self.width, self.height)
 
     @property
     def size(self):
         """
-            this function will return the size of square
+        Return the size of the square
+
+        :return: The size of the square
         """
-        return self.height
+        return self.width
 
     @size.setter
     def size(self, value):
-        self.height = value
+        """
+        Set the size of the square
+
+        :param value: The size of the square
+        """
         self.width = value
+        self.height = value
 
     def __str__(self):
         """
-            this is a special method
+        Return the string representation of the square
+
+        :return: The string representation of the square
         """
-        return "[Rectangle] ({}) {}/{} - {}".format(self.id, self.x, self.size)
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     def update(self, *args, **kwargs):
         """
-            let use *args, and **qwargs
+        Update the square
+
+        :return: The updated square
         """
-        if args is not None and len(args) is not 0:
-            attributes = ['id', 'size', 'x', 'y']
-            for i in range(len(args)):
-                if attributes[i] == 'size':
-                    setattr(self, 'width', args[i])
-                    setattr(self, 'height', args[i])
-                else:
-                    setattr(self, attributes[i], args[i])
-        else:
-            for key, value in kwargs.items():
-                if key == 'size':
-                    setattr(self, 'width', value)
-                    setattr(self, 'height', value)
-                else:
-                    setattr(self, key, value)
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
+
+        elif len(kwargs) != 0:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            else:
+                self.id
+
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            else:
+                self.size
+
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            else:
+                self.x
+
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
         """
-            this metho returns a dictionary
-            representation of a rectangle
+        Return a dictionary representation of the square
+
+        :return: The dictionary representation of the square
         """
-        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
