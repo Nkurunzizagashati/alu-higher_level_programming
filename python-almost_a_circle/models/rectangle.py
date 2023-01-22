@@ -146,7 +146,8 @@ class Rectangle(Base):
     def to_dictionary(self):
         """
             this method will return the attributes of a rectangle
-            in form of a dictionary, means with key value pair of the attributes.
+            in form of a dictionary, means with key value
+            pair of the attributes.
         """
         return {
             'id': self.id,
