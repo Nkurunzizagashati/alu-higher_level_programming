@@ -31,7 +31,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """this method saves list of dictionary to a file with .json extension"""
+        """
+            this method saves list of
+            dictionary to a file with .json extension
+        """
         file_name = cls.__name__ + ".json"
         new_list = []
         if list_objs:
