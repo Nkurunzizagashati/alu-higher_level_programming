@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-# a class Square that inherits from Rectangle
-# class
+"""
+    define class Square
+"""
+
+
 from models.rectangle import Rectangle
-"""
-    define class 'Square'
-"""
 
 
 class Square(Rectangle):
@@ -33,17 +33,16 @@ class Square(Rectangle):
             we will call this method and pass a value we
             want to give our size attribute
         """
-        self.height = value
         self.width = value
+        self.height = value
 
     def __str__(self):
         """
             this method will return
             [Square] (<id>) <x>/<y> - <size>
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id,
-                                                 self.x, self.y,
-                                                 self.height)
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
     def update(self, *args, **kwargs):
         """
             the 1st arument must be id
@@ -53,23 +52,37 @@ class Square(Rectangle):
             if args is present kwargs will not be considered
             else, its values will be assigned to Square attributes.
         """
-        if args:
-            self.id = args[0]
-            self.size = args[1]
-            self.x = args[2]
-            self.y = args[3]
-        else:
-            for k, v in kwargs.items():
-                setattr(self, k, v)
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
+
+        elif len(kwargs) != 0:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            else:
+                self.id
+
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            else:
+                self.size
+
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            else:
+                self.x
+
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
         """
             this method will return the attributes of a square
             in form of a dictionary, means with key value pair of the attributes.
         """
-        return {
-            "id": self.id,
-            "size": self.size,
-            "x": self.x,
-            "y": self.y
-        }
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
