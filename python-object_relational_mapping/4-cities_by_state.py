@@ -1,6 +1,24 @@
 #!/usr/bin/python3
 """
-    A script that lists all cities from the database hbtn_0e_4_usa
+    this script will list all cities
+    from our database Your script should take
+    3 arguments: mysql username, mysql password
+    and database name
+
+    You must use the module MySQLdb (import MySQLdb)
+
+    Your script should connect to a MySQL server
+    running on localhost at port 3306
+
+    Results must be sorted in ascending
+    order by cities.id
+
+    You can use only execute() once
+
+    Results must be displayed as they
+    are in the example below
+
+    Your code should not be executed when imported
 """
 
 
@@ -9,25 +27,25 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect(
+    db = MySQLdb.connect(
         user=sys.argv[1],
         password=sys.argv[2],
         db=sys.argv[3],
         host="localhost",
         port=3306
     )
-    cursor = conn.cursor()
+    cursor = db.cursor()
 
-    sql = """SELECT c.id, c.name, s.name
+    command = """SELECT c.id, c.name, s.name
           FROM states s, cities c
           WHERE c.state_id = s.id
           ORDER BY c.id ASC"""
 
-    cursor.execute(sql)
+    cursor.execute(command)
     cities = cursor.fetchall()
 
     for city in cities:
         print(city)
 
     cursor.close()
-    conn.close()
+    db.close()
