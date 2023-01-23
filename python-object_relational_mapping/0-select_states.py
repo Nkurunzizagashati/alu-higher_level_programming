@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-    Create a script that lists all states from a database hbtn_0e_0_usa
+    this script lists all states from the database
+    hbtn_0e_0_usa, and this code will not be
+    executed when imported
 """
 
 import sys
