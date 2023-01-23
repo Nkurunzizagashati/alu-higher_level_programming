@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Create a that lists all states with a name starting with N
+    we will import sys and MySQLdb
 """
 
 
@@ -8,7 +8,7 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect(
+    db = MySQLdb.connect(
        user=sys.argv[1],
        password=sys.argv[2],
        db=sys.argv[3],
@@ -16,16 +16,16 @@ if __name__ == "__main__":
        port=3306
     )
 
-    cur = conn.cursor()
+    cursor = db.cursor()
 
-    cur.execute("SELECT * FROM states \
+    cursor.execute("SELECT * FROM states \
         WHERE name LIKE BINARY 'N%' \
         ORDER BY id ASC")
 
-    states = cur.fetchall()
+    states = cursor.fetchall()
 
     for state in states:
         print(state)
 
-    cur.close()
-    conn.close()
+    cursor.close()
+    db.close()
