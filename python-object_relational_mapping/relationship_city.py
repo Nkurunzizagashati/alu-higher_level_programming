@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
     contains an improved file
     'model_city.py'
