@@ -1,10 +1,6 @@
 #!/usr/bin/node
-function numberOfArg(...number) {
-	if (arguments.length === 0) {
-		console.log("No argument");
-	} else if (arguments.length === 1) {
-		console.log("Argument found");
-	} else {
-		console.log("Arguments found");
-	}
-}
+console.log(process.argv.length <= 2
+? console.log("No argument")
+: process.argv.length === 3
+? console.log("Argument found")
+: console.log("Arguments found"));
