@@ -6,7 +6,7 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
-  
+
   print () {
     const mySign = 'X'.repeat(this.width);
     for (let i = 0; i < this.height; i += 1) {
