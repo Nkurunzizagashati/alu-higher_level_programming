@@ -13,11 +13,13 @@ module.exports = class Rectangle {
       console.log(mySign);
     }
   }
+
   rotate () {
-    let myVar = this.width;
+    const myVar = this.width;
     this.width = this.height;
     this.height = myVar;
   }
+
   double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
