@@ -10,8 +10,8 @@ request.get(url, (error, response, body) => {
         if(!err) {
           const character = JSON.parse(body);
           console.log(character.name);
-        });
+        }
       });
     });
   }
-};
+});
