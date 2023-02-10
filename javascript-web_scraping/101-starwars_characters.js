@@ -6,11 +6,13 @@ request(url, (error, response, body) => {
   if (!error) {
     const data = JSON.parse(body);
     const characters = data.characters;
-    characters.forEach(characterUrl, (err, response, body) => {
-      if (!err) {
-        const characterData = JSON.parse(body);
-        console.log(characterData.name);
-      }
+    characters.forEach(characterUrl => {
+      request(characterUrl, (err, response, body) => {
+        if (!err) {
+          const characterData = JSON.parse(body);
+          console.log(characterData.name);
+        }
+      });
     });
   }
 });
