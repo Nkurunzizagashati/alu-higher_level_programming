@@ -16,5 +16,5 @@ request.get(url, (error, response, body) => {
       Tasks[task.userId]++;
     }
   });
-  console.log(userId, completedTasks);
+  console.log(Tasks);
 });
