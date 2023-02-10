@@ -7,7 +7,7 @@ request.get(url, (error, response, body) => {
     const movie = JSON.parse(body);
     movie.characters.forEach(characterUrl => {
       request.get(characterUrl, (err, response, body) => {
-        if(!err) {
+        if (!err) {
           const character = JSON.parse(body);
           console.log(character.name);
         }
