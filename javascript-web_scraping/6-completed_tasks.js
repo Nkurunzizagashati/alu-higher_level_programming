@@ -16,7 +16,5 @@ request.get(url, (error, response, body) => {
       Tasks[task.userId]++;
     }
   });
-  Object.entries(Tasks).forEach(([userId, completedTasks]) => {
-    console.log(`User ID: ${userId}, Completed Tasks: ${completedTasks}`);
-  });
+  console.log(userId, completedTasks);
 });
